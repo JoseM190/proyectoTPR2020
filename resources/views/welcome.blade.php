@@ -61,6 +61,10 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .h6{
+                color: green;
+            }
         </style>
     </head>
     <body>
@@ -81,7 +85,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                <h6>BIENVENIDOS A LA MATERIA DE <br>TECNOLOGIA DE PROGRAMACION EN RED </h6>
+                <h6 class="h6">BIENVENIDOS A LA MATERIA DE <br>TECNOLOGIA DE PROGRAMACION EN RED </h6>
                 </div>
 
                 <div class="links">
