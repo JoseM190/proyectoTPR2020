@@ -14,13 +14,13 @@ class CreateExamDetailsTable extends Migration
     public function up()
     {
         Schema::create('exam__details', function (Blueprint $table) {
-            $table->id('id_detail');
+            $table->id('id');
             $table->unsignedInteger('id_student');
-            $table->foreign('id_student')->references('user_id')->on('users');
+            $table->foreign('id_student')->references('id')->on('users');
             $table->unsignedInteger('id_themes');
-            $table->foreign('id_themes')->references('id_themes')->on('themes');
+            $table->foreign('id_themes')->references('id')->on('themes');
             $table->unsignedInteger('id_question');
-            $table->foreign('id_question')->references('id_question')->on('questions');
+            $table->foreign('id_question')->references('id')->on('questions');
             $table->string('answer_student');
             $table->integer('score');
             $table->timestamps();

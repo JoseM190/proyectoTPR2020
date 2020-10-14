@@ -40,10 +40,10 @@ class User extends Authenticatable
     protected $table = 'users';
     //relacion de uno a uno
     public function roles(){
-        return $this->hasOne('App\Role', 'id_role');
+        return $this->hasOne('App\Role', 'id');
     }
     //relacion de uno a muchos
     public function assistances(){
-        return $this->belongsTo('App\Assistance', 'id_assitances');
+        return $this->belongsTo('App\Assistance', 'id');
     }
 }

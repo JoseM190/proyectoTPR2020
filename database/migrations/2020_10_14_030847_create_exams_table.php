@@ -14,18 +14,18 @@ class CreateExamsTable extends Migration
     public function up()
     {
         Schema::create('exams', function (Blueprint $table) {
-            $table->increments('id_exam');
+            $table->increments('id');
             $table->string('description');
             $table->unsignedInteger('id_detail');
-            $table->foreign('id_detail')->references('id_detail')->on('details');
+            $table->foreign('id_detail')->references('id')->on('exam_details');
             $table->date('date_exam');
             $table->integer('note_exam');
             $table->unsignedInteger('id_student');
-            $table->foreign('id_student')->references('user_id')->on('users');
+            $table->foreign('id_student')->references('id')->on('users');
             $table->unsignedInteger('id_teacher');
-            $table->foreign('id_teacher')->references('user_id')->on('users');
+            $table->foreign('id_teacher')->references('id')->on('users');
             $table->unsignedInteger('id_themes');
-            $table->foreign('id_themes')->references('id_themes')->on('themes');
+            $table->foreign('id_themes')->references('id')->on('themes');
             $table->timestamps();
         });
     }

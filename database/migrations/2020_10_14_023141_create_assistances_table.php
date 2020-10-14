@@ -14,10 +14,10 @@ class CreateAssistancesTable extends Migration
     public function up()
     {
         Schema::create('assistances', function (Blueprint $table) {
-            $table->increments('id_assistances');
+            $table->increments('id');
             $table->date('date_assistances');
             $table->unsignedInteger('user_id');
-            $table->foreign('user_id')->references('user_id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
