@@ -14,7 +14,7 @@ class CreateExamDetailsTable extends Migration
     public function up()
     {
         Schema::create('exam_details', function (Blueprint $table) {
-            $table->increments('id')->nullable();
+            $table->increments('id');
             $table->unsignedInteger('id_student');
             $table->foreign('id_student')->references('id')->on('users');
             $table->unsignedInteger('id_themes');
