@@ -13,7 +13,7 @@ class CreateExamDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('exam__details', function (Blueprint $table) {
+        Schema::create('exam_details', function (Blueprint $table) {
             $table->id('id');
             $table->unsignedInteger('id_student');
             $table->foreign('id_student')->references('id')->on('users');
@@ -34,6 +34,6 @@ class CreateExamDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('exam__details');
+        Schema::dropIfExists('exam_details');
     }
 }
