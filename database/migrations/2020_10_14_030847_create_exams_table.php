@@ -16,7 +16,7 @@ class CreateExamsTable extends Migration
         Schema::create('exams', function (Blueprint $table) {
             $table->increments('id');
             $table->string('description');
-            $table->unsignedInteger('id_detail');
+            $table->integer('id_detail');
             $table->foreign('id_detail')->references('id')->on('exam_details');
             $table->date('date_exam');
             $table->integer('note_exam');
