@@ -62,9 +62,9 @@
                 margin-bottom: 30px;
             }
 
-            .h6{
-                color: green;
-            }
+            /*.h6{
+                color: blue;
+            }*/
         </style>
     </head>
     <body>
@@ -85,7 +85,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                <h6 class="h6">BIENVENIDOS A LA MATERIA DE <br>TECNOLOGIA DE PROGRAMACION EN RED </h6>
+                LARAVEL
                 </div>
 
                 <div class="links">
