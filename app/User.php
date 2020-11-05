@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'surname', 'identify_card_user', 'email', 'user', 'password', 'birthdate', 'gender_user', 'cellular_user',
+        'name', 'surname', 'identify_card_user', 'email', 'password', 'birthdate', 'gender_user', 'cellular_user',
     ];
 
     /**
@@ -38,10 +38,6 @@ class User extends Authenticatable
     ];
 
     protected $table = 'users';
-    //relacion de uno a uno
-    public function roles(){
-        return $this->hasOne('App\Role', 'id');
-    }
     //relacion de uno a muchos
     public function assistances(){
         return $this->belongsTo('App\Assistance', 'id');
